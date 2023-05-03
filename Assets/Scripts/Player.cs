@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
     {
         spawnPoint = player.transform.position;
         spawnRotation = player.transform.rotation;
+
         //cameraController = GameObject.Find("Main Camera").GetComponent<CameraPositionController>();
 
     }

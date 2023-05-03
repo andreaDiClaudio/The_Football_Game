@@ -6,12 +6,13 @@ public class BallCollision : MonoBehaviour
 {
     public Player player;
     public float kickPower;
+    public Rigidbody ballRigidBody;
     private void OnTriggerEnter(Collider other)
     {
         Rigidbody rigidbody = other.GetComponent<Rigidbody>();
         if (other.gameObject.layer == 6)
         {
-            Debug.Log("Ball collided with player!");
+
             // By subtracting the two vectors, we get a delta that 
             // 'points' from player towards this object, basically
             // The direction we need to move forwards
