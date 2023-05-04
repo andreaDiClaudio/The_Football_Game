@@ -9,7 +9,8 @@ public class LevelDelay : MonoBehaviour
     public TMP_Text countdownText;
     public float timeLeft = 3.0f;
     public GameObject hud;
-    //public PauseController pauseController;
+    public Pause pause;
+
     public void Start()
     {
         Time.timeScale = 0;
@@ -26,12 +27,13 @@ public class LevelDelay : MonoBehaviour
     {
         while (timeLeft > 0)
         {
-            //TODO disable the escape to go to menu while counting down. //TODO MORE COMMENTS
+            pause.enabled = false;
             hud.SetActive(false);
             countdownText.text = timeLeft.ToString();
             yield return new WaitForSecondsRealtime(1.0f);
             timeLeft--;
         }
+        pause.enabled = true;
         hud.SetActive(true);
         countdownGameObject.SetActive(false);
         Timer.startTimer();
