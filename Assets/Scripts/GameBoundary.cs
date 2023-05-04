@@ -21,6 +21,7 @@ public class GameBoundary : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             deathAndRespawn.Die();
+            //TODO fail screen
         }
     }
 }
