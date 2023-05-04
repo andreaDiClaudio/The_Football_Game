@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class GameBoundary : MonoBehaviour
 {
+    public int deathCounter = 0;
     public DeathAndRespawn deathAndRespawn;
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
+    public static bool isDead = false;
 
     //Detects if the ball touches the box collider for the game boundaries.
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
         {
+            isDead = true;
             deathAndRespawn.Die();
-            //TODO fail screen
+            deathCounter++;
+            if (deathCounter == 3)
+            {
+                //TODO fail screen
+                Debug.Log("GAME OVER");
+            }
         }
     }
 }

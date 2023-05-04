@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
         isTimerActive = true;
         elapsedTime = 0;
         startTime = Time.time;
+        GameBoundary.isDead = false;
     }
 
     public static void StopTimer()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class MainMenu : MonoBehaviour
     //Goes to Level 1
     public void PlayLevel1()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneBuildIndex: 1);
     }
 
     //Close the application

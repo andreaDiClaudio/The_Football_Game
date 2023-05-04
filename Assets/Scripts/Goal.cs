@@ -21,10 +21,12 @@ public class Goal : MonoBehaviour
     public GameObject playerGameObject;
 
     public GameObject winScreen;
+    public static bool isGoal = false;
 
     void Start()
     {
         winScreen.SetActive(false);
+        isGoal = false;
     }
 
     //Detects if the ball touches the box collider for the goal
@@ -39,6 +41,7 @@ public class Goal : MonoBehaviour
 
     public void Win()
     {
+        isGoal = true;
         winScreen.SetActive(true);
         /*TIMER*/
         Timer.StopTimer();

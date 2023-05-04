@@ -18,14 +18,19 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if (!isMenuVisible)
+            if (!Goal.isGoal || !GameBoundary.isDead)
             {
-                PauseGame();
+                if (!isMenuVisible)
+                {
+                    PauseGame();
+                }
+                else
+                {
+                    ResumeGame();
+                }
+
             }
-            else
-            {
-                ResumeGame();
-            }
+
         }
     }
 
