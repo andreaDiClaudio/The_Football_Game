@@ -27,15 +27,13 @@ public class DeathAndRespawn : MonoBehaviour
 
     private Vector3 playerSpawnPoint;
     private Quaternion playerSpawnRotation;
-    private bool isPlayerDead = false;
 
     [Header("Death and Respawn")]
     [Tooltip("The time (in seconds) it takes for the player to respawn after dying")]
     public float respawnTime = 1f;
-
-    //public CameraController cameraController; TODO together with ball position
-
     int deathCount = 0;
+
+    public LevelDelay levelDelay;
 
     void Start()
     {
@@ -58,13 +56,12 @@ public class DeathAndRespawn : MonoBehaviour
 
     public void Die()
     {
-        if (!isPlayerDead || !isBallDead)
+        if (!isBallDead)
         {
             /*TIMER*/
-            //Clock.StopTimer(); //TODO Implement Timer
+            Timer.StopTimer();
 
             /*PLAYER*/
-            isPlayerDead = true;
             //set velocity to 0,0,0
             Player.movementVelocity = Vector3.zero;
             //Disable the component (script)
@@ -90,7 +87,6 @@ public class DeathAndRespawn : MonoBehaviour
     public void Respawn()
     {
         /*PLAYER*/
-        isPlayerDead = false;
         //Reset Player position
         player.transform.position = playerSpawnPoint;
         //Reset Player Rotation
@@ -110,18 +106,20 @@ public class DeathAndRespawn : MonoBehaviour
         ball.transform.rotation = ballSpawnRotation;
         //Enable GameObject
         ball.SetActive(true);
+        //set velocity and rotation to 0,0,0
+        ballRigidBody.velocity = Vector3.zero;
+        ballRigidBody.angularVelocity = Vector3.zero;
 
         /*LEVEL DELAY*/
-        /*
         //Level Delay to wait three second before actuallt start to play
-        levelDelay.hud.SetActive(true);
+        levelDelay.hud.SetActive(false);
+        levelDelay.countdownGameObject.SetActive(true);
         levelDelay.timeLeft = 3;
         Time.timeScale = 0;
         StartCoroutine(levelDelay.StartLevelDelay());
         StartCoroutine(levelDelay.Count());
 
-        Clock.startTimer();
-        */
+        Timer.startTimer();
 
         deathCount++;
     }

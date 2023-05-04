@@ -16,7 +16,7 @@ public class Goal : MonoBehaviour
         //GameObject goal = gameObject;
         if (other.CompareTag("Ball"))
         {
-            Debug.Log("Goal");
+            //Win();
         }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameBoundary : MonoBehaviour
 {
+    public DeathAndRespawn deathAndRespawn;
     void Start()
     {
 
@@ -19,7 +20,7 @@ public class GameBoundary : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            Debug.Log("Out of Boundaries");
+            deathAndRespawn.Die();
         }
     }
 }
