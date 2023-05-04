@@ -10,6 +10,7 @@ public class Goal : MonoBehaviour
 
     }
 
+    //Detects if the ball touches the box collider for the goal
     private void OnTriggerEnter(Collider other)
     {
         //GameObject goal = gameObject;

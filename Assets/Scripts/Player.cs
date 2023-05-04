@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //References
     [Header("References")]
     public new Transform transform;
-    //public Transform modelTransform;
     public CharacterController characterController;
-    //public CameraPositionController cameraController;
     public GameObject player;
     //public LevelDelay levelDelay;
 
@@ -32,78 +29,18 @@ public class Player : MonoBehaviour
 
     [Tooltip("Multiplier for momentum when attempting to move in a direction opposite to current traveling direction")]
     public float reverseMomentumMultiplier = 2.2f;
+    public static Vector3 movementVelocity = Vector3.zero;
 
-    private Vector3 movementVelocity = Vector3.zero;
-
-    //Death and Respawn
-    [Header("Death and Raspawning")]
-    [Tooltip("How Long after the player's death, ins econds, before they are respwaned?")]
-    public float respawnTime = 1f;
-
-    //private bool isDead = false;
-
-    private Vector3 spawnPoint;
-    private Quaternion spawnRotation;
-
-    // Start is called before the first frame update
     void Start()
     {
-        spawnPoint = player.transform.position;
-        spawnRotation = player.transform.rotation;
-
-        //cameraController = GameObject.Find("Main Camera").GetComponent<CameraPositionController>();
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Movement();
-
-        if (Input.GetKey(KeyCode.T))
-        {
-            //Die();
-        }
     }
-    /*
-        public void Die()
-        {
-            if (!isDead)
-            {
-                Clock.StopTimer();
-                isDead = true;
-                movementVelocity = Vector3.zero; //set velocity to 0,0,0
-                enabled = false; //disable the component (script)
-                characterController.enabled = false; //disable characterController
-                player.SetActive(false); //Disable GameObject
-                //Invoke: invokes a method after a period of time. First argument is the methodName, second is the time.
-                //When you invoke a method you cannot pass any parameter to it.
-                Invoke(nameof(Respawn), respawnTime);
-            }
-        }
 
-        public void Respawn()
-        {
-            isDead = false;
-            player.transform.position = spawnPoint;
-            modelTransform.rotation = spawnRotation;
-            enabled = true;
-            characterController.enabled = true;
-            player.SetActive(true);
-            cameraController.ResetCameraPosition();
-            DeathController.deathCount++;
-
-            //Level Delay to wait three second before actuallt start to play
-            levelDelay.hud.SetActive(true);
-            levelDelay.timeLeft = 3;
-            Time.timeScale = 0;
-            StartCoroutine(levelDelay.StartLevelDelay());
-            StartCoroutine(levelDelay.Count());
-
-            Clock.startTimer();
-
-        }
-    */
     /*MOVEMENT*/
     void Movement()
     {

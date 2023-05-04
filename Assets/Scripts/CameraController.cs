@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    //References
-    [Header("References")]
+
+    [Header("Camera initial position")]
     private Vector3 initialPosition;
+    [Header("Camera rotation initial position")]
     private Quaternion initialRotation;
+    [Header("Reference to ball")]
     public Transform ballTransform;
+    [Header("Distance of the camera from the ball")]
     public Vector3 offset;
 
     // Start is called before the first frame update
@@ -19,14 +22,15 @@ public class CameraController : MonoBehaviour
         initialRotation = transform.rotation;
     }
 
+    //Called once per frame, after all the Update() functions have been called.
     void LateUpdate()
     {
         transform.position = ballTransform.position + offset;
     }
 
+    // Reset the camera position and rotation to the initial values
     public void ResetCameraPosition()
     {
-        // Reset the camera position and rotation to the initial values
         transform.position = initialPosition;
         transform.rotation = initialRotation;
     }
