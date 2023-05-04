@@ -549,6 +549,11 @@ CharacterController:
   m_SkinWidth: 0.001
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.02, z: 0}
+--- !u!4 &721856338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1700627064255241967, guid: 421dce1245a9844a5835ef16857ba7ae, type: 3}
+  m_PrefabInstance: {fileID: 1700627062457351118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &721856339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +566,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e547f769d7bb4195b00a07461bbddd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 1724556363}
+  ballRigidBody: {fileID: 1724556365}
+  player: {fileID: 721856333}
+  playerGameObject: {fileID: 721856330}
+  playerTransform: {fileID: 721856338}
+  respawnTime: 1
 --- !u!1 &1101897155
 GameObject:
   m_ObjectHideFlags: 0

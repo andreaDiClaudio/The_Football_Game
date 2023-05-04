@@ -5,22 +5,33 @@ using UnityEngine;
 public class DeathAndRespawn : MonoBehaviour
 {
     [Header("References")]
+
+    [Header("Ball")]
+    [Tooltip("The ball object")]
+    public GameObject ball;
+    [Tooltip("The ball rigidBody")]
+    public Rigidbody ballRigidBody;
+    private Vector3 ballSpawnPoint;
+    private Quaternion ballSpawnRotation;
+    private bool isBallDead = false;
+
+    [Header("Player")]
     [Tooltip("The player object")]
     public Player player;
+
     [Tooltip("The game object that represents the player")]
     public GameObject playerGameObject;
 
     [Tooltip("The transform of the player game object")]
     public Transform playerTransform;
-    [Header("Death and Respawn")]
 
+    private Vector3 playerSpawnPoint;
+    private Quaternion playerSpawnRotation;
+    private bool isPlayerDead = false;
+
+    [Header("Death and Respawn")]
     [Tooltip("The time (in seconds) it takes for the player to respawn after dying")]
     public float respawnTime = 1f;
-
-    private Vector3 spawnPoint;
-    private Quaternion spawnRotation;
-
-    private bool isDead = false;
 
     //public CameraController cameraController; TODO together with ball position
 
@@ -29,9 +40,12 @@ public class DeathAndRespawn : MonoBehaviour
     void Start()
     {
         //Saves the spawn point and spawn rotation of the player
-        spawnPoint = player.transform.position;
-        spawnRotation = player.transform.rotation;
-        //TODO Saves the spawn point of the ball
+        playerSpawnPoint = player.transform.position;
+        playerSpawnRotation = player.transform.rotation;
+
+        //Saves the spawn point of the ball
+        ballSpawnPoint = ball.transform.position;
+        ballSpawnRotation = ball.transform.rotation;
     }
 
     void Update()
@@ -44,18 +58,30 @@ public class DeathAndRespawn : MonoBehaviour
 
     public void Die()
     {
-        if (!isDead)
+        if (!isPlayerDead || !isBallDead)
         {
+            /*TIMER*/
             //Clock.StopTimer(); //TODO Implement Timer
-            isDead = true;
+
+            /*PLAYER*/
+            isPlayerDead = true;
             //set velocity to 0,0,0
             Player.movementVelocity = Vector3.zero;
-            //disable the component (script)
-            enabled = false;
-            //disable characterController
+            //Disable the component (script)
+            player.enabled = false;
+            //Disable characterController
             player.characterController.enabled = false;
             //Disable GameObject
             playerGameObject.SetActive(false);
+
+            /*BALL*/
+            isBallDead = true;
+            //set velocity to 0,0,0
+            ballRigidBody.velocity = Vector3.zero;
+            //Disable GameObject
+            ball.SetActive(false);
+
+
             //Invoke: invokes a method after a period of time. First argument is the methodName, second is the time. When you invoke a method you cannot pass any parameter to it.
             Invoke(nameof(Respawn), respawnTime);
         }
@@ -64,13 +90,13 @@ public class DeathAndRespawn : MonoBehaviour
     public void Respawn()
     {
         /*PLAYER*/
-        isDead = false;
+        isPlayerDead = false;
         //Reset Player position
-        player.transform.position = spawnPoint;
+        player.transform.position = playerSpawnPoint;
         //Reset Player Rotation
-        playerTransform.rotation = spawnRotation;
+        playerTransform.rotation = playerSpawnRotation;
         //Enable component (script)
-        enabled = true;
+        player.enabled = true;
         //Enable player characterController
         player.characterController.enabled = true;
         //Activate GameObject
@@ -78,7 +104,12 @@ public class DeathAndRespawn : MonoBehaviour
         //cameraController.ResetCameraPosition();
 
         /*BALL*/
-        //TODO 
+        isBallDead = false;
+        //Reset ball position
+        ball.transform.position = ballSpawnPoint;
+        ball.transform.rotation = ballSpawnRotation;
+        //Enable GameObject
+        ball.SetActive(true);
 
         /*LEVEL DELAY*/
         /*
