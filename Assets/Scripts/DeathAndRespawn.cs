@@ -13,7 +13,7 @@ public class DeathAndRespawn : MonoBehaviour
     public Rigidbody ballRigidBody;
     private Vector3 ballSpawnPoint;
     private Quaternion ballSpawnRotation;
-    private bool isBallDead = false;
+    public static bool isBallDead = false;
 
     [Header("Player")]
     [Tooltip("The player object")]
@@ -31,7 +31,6 @@ public class DeathAndRespawn : MonoBehaviour
     [Header("Death and Respawn")]
     [Tooltip("The time (in seconds) it takes for the player to respawn after dying")]
     public float respawnTime = 1f;
-    int deathCount = 0;
 
     public LevelDelay levelDelay;
 
@@ -120,7 +119,5 @@ public class DeathAndRespawn : MonoBehaviour
         StartCoroutine(levelDelay.Count());
 
         Timer.startTimer();
-
-        deathCount++;
     }
 }
