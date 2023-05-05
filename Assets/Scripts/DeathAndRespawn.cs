@@ -57,6 +57,8 @@ public class DeathAndRespawn : MonoBehaviour
     {
         if (!isBallDead)
         {
+            isBallDead = true;
+
             /*TIMER*/
             Timer.StopTimer();
 
@@ -71,7 +73,6 @@ public class DeathAndRespawn : MonoBehaviour
             playerGameObject.SetActive(false);
 
             /*BALL*/
-            isBallDead = true;
             //set velocity to 0,0,0
             ballRigidBody.velocity = Vector3.zero;
             //Disable GameObject

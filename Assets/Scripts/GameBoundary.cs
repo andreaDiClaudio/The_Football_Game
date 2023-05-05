@@ -12,6 +12,7 @@ public class GameBoundary : MonoBehaviour
 
     public GameObject ball;
     public Rigidbody ballRigidBody;
+    public WhistleSoundEffect whistleSoundEffect;
 
     void Start()
     {
@@ -23,6 +24,8 @@ public class GameBoundary : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
+            whistleSoundEffect.PlayWhistle();
+
             deathCounter++;
             if (deathCounter == 3)
             {
@@ -48,6 +51,7 @@ public class GameBoundary : MonoBehaviour
                 ball.SetActive(false);
 
                 deathCounter = 0;
+
                 DeathAndRespawn.isBallDead = false;
             }
             else
