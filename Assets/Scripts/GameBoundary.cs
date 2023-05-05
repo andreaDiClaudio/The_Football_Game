@@ -6,7 +6,6 @@ public class GameBoundary : MonoBehaviour
 {
     public int deathCounter = 0;
     public DeathAndRespawn deathAndRespawn;
-    public static bool isDead = false;
     public GameObject gameOverScreen;
     public Player player;
     public GameObject playerGameObject;
@@ -27,7 +26,6 @@ public class GameBoundary : MonoBehaviour
             deathCounter++;
             if (deathCounter == 3)
             {
-                isDead = true;
                 gameOverScreen.SetActive(true);
                 /*TIMER*/
                 Timer.StopTimer();
@@ -54,7 +52,6 @@ public class GameBoundary : MonoBehaviour
             }
             else
             {
-                isDead = true;
                 deathAndRespawn.Die();
             }
         }

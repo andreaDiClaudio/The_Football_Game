@@ -1324,6 +1324,7 @@ MonoBehaviour:
   player: {fileID: 721856333}
   playerGameObject: {fileID: 721856330}
   winScreen: {fileID: 622224554}
+  pause: {fileID: 721856340}
 --- !u!65 &576249335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1917,7 +1918,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 721856333}
   kickPower: 4
-  ballRigidBody: {fileID: 1724556365}
 --- !u!114 &721856333 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1700627064255241964, guid: 421dce1245a9844a5835ef16857ba7ae, type: 3}

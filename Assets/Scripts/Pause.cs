@@ -18,7 +18,7 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if (!Goal.isGoal || !GameBoundary.isDead)
+            if (!Goal.isGoal || !DeathAndRespawn.isBallDead)
             {
                 if (!isMenuVisible)
                 {

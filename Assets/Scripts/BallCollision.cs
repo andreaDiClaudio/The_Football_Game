@@ -10,7 +10,6 @@ public class BallCollision : MonoBehaviour
     [Tooltip("Strength used to kick the ball")]
     public float kickPower;
     [Tooltip("Reference to rigidBody of the ball")]
-    public Rigidbody ballRigidBody;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,7 +22,7 @@ public class BallCollision : MonoBehaviour
 
             var forward = deltaPosition.normalized;
 
-            rigidbody.AddForce(forward * kickPower, ForceMode.Impulse);
+            rigidbody.AddForce(forward * kickPower, ForceMode.Impulse); //TODO Improve thhis like try to multiply the kickpower with the player speed.
         }
     }
 }

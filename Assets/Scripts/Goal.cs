@@ -22,6 +22,7 @@ public class Goal : MonoBehaviour
 
     public GameObject winScreen;
     public static bool isGoal = false;
+    public Pause pause;
 
     void Start()
     {
@@ -41,8 +42,10 @@ public class Goal : MonoBehaviour
 
     public void Win()
     {
+        //Disable pause
+        pause.enabled = false;
+
         isGoal = true;
-        winScreen.SetActive(true);
         /*TIMER*/
         Timer.StopTimer();
 
@@ -60,6 +63,7 @@ public class Goal : MonoBehaviour
         ballRigidBody.angularVelocity = Vector3.zero;
 
         //Shows Win hud
+        winScreen.SetActive(true);
     }
 
     public void LoadMainMenu()

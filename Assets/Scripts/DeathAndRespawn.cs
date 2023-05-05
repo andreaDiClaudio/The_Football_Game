@@ -77,7 +77,6 @@ public class DeathAndRespawn : MonoBehaviour
             //Disable GameObject
             ball.SetActive(false);
 
-
             //Invoke: invokes a method after a period of time. First argument is the methodName, second is the time. When you invoke a method you cannot pass any parameter to it.
             Invoke(nameof(Respawn), respawnTime);
         }
