@@ -17,6 +17,9 @@ public class WhistleSoundEffect : MonoBehaviour
         }
     }
 
+    //TODO Audio when player scores (not here this is just reminder)
+    //TODO Audio BOOOO when ball out of bound (not here this is just reminder)
+
     public void PlayWhistle()
     {
         audioSource.clip = whistleSfx;
