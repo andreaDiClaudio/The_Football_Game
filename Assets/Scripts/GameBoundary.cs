@@ -48,6 +48,9 @@ public class GameBoundary : MonoBehaviour
                 ballRigidBody.velocity = Vector3.zero;
                 //Disable GameObject
                 ball.SetActive(false);
+
+                deathCounter = 0;
+                DeathAndRespawn.isBallDead = false;
             }
             else
             {
