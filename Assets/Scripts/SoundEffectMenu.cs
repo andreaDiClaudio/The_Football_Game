@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundEffectMenu : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public static AudioSource audioSource;
     public AudioClip buttonSfx;
 
     public void ButtonSfx()

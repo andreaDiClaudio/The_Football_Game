@@ -6,6 +6,7 @@ public class Pause : MonoBehaviour
 {
     public GameObject menu;
     private bool isMenuVisible = false;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,10 @@ public class Pause : MonoBehaviour
     {
         isMenuVisible = true;
         menu.SetActive(true);
-        Time.timeScale = 0; //Freeze all; pause every object that is time-based.
+        //Freeze all; pause every object that is time-based.
+        Time.timeScale = 0;
+        //Pauses the audio
+        audioSource.Pause();
     }
 
     //Resume from pause
@@ -48,5 +52,6 @@ public class Pause : MonoBehaviour
         isMenuVisible = false;
         menu.SetActive(false);
         Time.timeScale = 1; //Remove freeze; unpause every object that is time-based.
+        audioSource.Play();
     }
 }
