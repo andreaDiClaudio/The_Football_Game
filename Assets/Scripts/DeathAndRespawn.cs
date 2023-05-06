@@ -55,10 +55,6 @@ public class DeathAndRespawn : MonoBehaviour
     void Update()
     {
         attemptText.text = $"Attempt: {deathCounter}";
-        if (Input.GetKey(KeyCode.T))
-        {
-            Die();
-        }
     }
 
     public void Die()
