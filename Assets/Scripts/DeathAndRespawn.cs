@@ -89,6 +89,8 @@ public class DeathAndRespawn : MonoBehaviour
                 ball.SetActive(false);
 
                 DeathAndRespawn.isBallDead = false;
+
+                deathCounter = 3;
             }
             else
             {
