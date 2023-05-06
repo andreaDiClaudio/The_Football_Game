@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameBoundary : MonoBehaviour
 {
-    public int deathCounter = 0;
+    public int deathCounter = 3;
     public DeathAndRespawn deathAndRespawn;
     public GameObject gameOverScreen;
     public Player player;
@@ -14,10 +15,17 @@ public class GameBoundary : MonoBehaviour
     public Rigidbody ballRigidBody;
     public WhistleSoundEffect whistleSoundEffect;
     public CrowdCheeringFailureSoundEffect crowdCheeringFailureSoundEffect;
+    public TMP_Text attemptText;
 
     void Start()
     {
         gameOverScreen.SetActive(false);
+        deathCounter = 3;
+    }
+
+    void Update()
+    {
+        attemptText.text = $"Attempt: {deathCounter}";
     }
 
     //Detects if the ball touches the box collider for the game boundaries.
@@ -28,8 +36,8 @@ public class GameBoundary : MonoBehaviour
             whistleSoundEffect.PlayWhistle();
             crowdCheeringFailureSoundEffect.PlayBooing();
 
-            deathCounter++;
-            if (deathCounter == 3)
+            deathCounter--;
+            if (deathCounter == 0)
             {
                 gameOverScreen.SetActive(true);
                 /*TIMER*/
@@ -51,8 +59,6 @@ public class GameBoundary : MonoBehaviour
                 ballRigidBody.velocity = Vector3.zero;
                 //Disable GameObject
                 ball.SetActive(false);
-
-                deathCounter = 0;
 
                 DeathAndRespawn.isBallDead = false;
             }

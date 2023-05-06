@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DeathAndRespawn : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class DeathAndRespawn : MonoBehaviour
     private Vector3 ballSpawnPoint;
     private Quaternion ballSpawnRotation;
     public static bool isBallDead = false;
+    public int deathCounter = 3;
 
     [Header("Player")]
     [Tooltip("The player object")]
@@ -31,7 +33,6 @@ public class DeathAndRespawn : MonoBehaviour
     [Header("Death and Respawn")]
     [Tooltip("The time (in seconds) it takes for the player to respawn after dying")]
     public float respawnTime = 1f;
-
     public LevelDelay levelDelay;
 
     void Start()
@@ -119,5 +120,6 @@ public class DeathAndRespawn : MonoBehaviour
         StartCoroutine(levelDelay.Count());
 
         Timer.startTimer();
+        deathCounter--;
     }
 }

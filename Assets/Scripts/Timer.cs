@@ -10,10 +10,6 @@ public class Timer : MonoBehaviour
     public static bool isTimerActive = false;
     static float elapsedTime;
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         if (isTimerActive)
