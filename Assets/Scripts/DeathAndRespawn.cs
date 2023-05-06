@@ -15,7 +15,7 @@ public class DeathAndRespawn : MonoBehaviour
     private Vector3 ballSpawnPoint;
     private Quaternion ballSpawnRotation;
     public static bool isBallDead = false;
-    public int deathCounter = 3;
+    public static int deathCounter = 3;
 
     [Header("Player")]
     [Tooltip("The player object")]
@@ -34,6 +34,10 @@ public class DeathAndRespawn : MonoBehaviour
     [Tooltip("The time (in seconds) it takes for the player to respawn after dying")]
     public float respawnTime = 1f;
     public LevelDelay levelDelay;
+    public TMP_Text attemptText;
+    public WhistleSoundEffect whistleSoundEffect;
+    public CrowdCheeringFailureSoundEffect crowdCheeringFailureSoundEffect;
+    public GameObject gameOverScreen;
 
     void Start()
     {
@@ -44,10 +48,13 @@ public class DeathAndRespawn : MonoBehaviour
         //Saves the spawn point of the ball
         ballSpawnPoint = ball.transform.position;
         ballSpawnRotation = ball.transform.rotation;
+
+        gameOverScreen.SetActive(false);
     }
 
     void Update()
     {
+        attemptText.text = $"Attempt: {deathCounter}";
         if (Input.GetKey(KeyCode.T))
         {
             Die();
@@ -58,29 +65,62 @@ public class DeathAndRespawn : MonoBehaviour
     {
         if (!isBallDead)
         {
-            isBallDead = true;
+            whistleSoundEffect.PlayWhistle();
+            crowdCheeringFailureSoundEffect.PlayBooing();
 
-            /*TIMER*/
-            Timer.StopTimer();
+            deathCounter--;
+            if (deathCounter == 0)
+            {
+                gameOverScreen.SetActive(true);
+                /*TIMER*/
+                Timer.StopTimer();
 
-            /*PLAYER*/
-            //set velocity to 0,0,0
-            Player.movementVelocity = Vector3.zero;
-            //Disable the component (script)
-            player.enabled = false;
-            //Disable characterController
-            player.characterController.enabled = false;
-            //Disable GameObject
-            playerGameObject.SetActive(false);
+                /*PLAYER*/
+                //set velocity to 0,0,0
+                Player.movementVelocity = Vector3.zero;
+                //Disable the component (script)
+                player.enabled = false;
+                //Disable characterController
+                player.characterController.enabled = false;
+                //Disable GameObject
+                playerGameObject.SetActive(false);
 
-            /*BALL*/
-            //set velocity to 0,0,0
-            ballRigidBody.velocity = Vector3.zero;
-            //Disable GameObject
-            ball.SetActive(false);
+                /*BALL*/
+                DeathAndRespawn.isBallDead = true;
+                //set velocity to 0,0,0
+                ballRigidBody.velocity = Vector3.zero;
+                //Disable GameObject
+                ball.SetActive(false);
 
-            //Invoke: invokes a method after a period of time. First argument is the methodName, second is the time. When you invoke a method you cannot pass any parameter to it.
-            Invoke(nameof(Respawn), respawnTime);
+                DeathAndRespawn.isBallDead = false;
+            }
+            else
+            {
+
+                isBallDead = true;
+
+                /*TIMER*/
+                Timer.StopTimer();
+
+                /*PLAYER*/
+                //set velocity to 0,0,0
+                Player.movementVelocity = Vector3.zero;
+                //Disable the component (script)
+                player.enabled = false;
+                //Disable characterController
+                player.characterController.enabled = false;
+                //Disable GameObject
+                playerGameObject.SetActive(false);
+
+                /*BALL*/
+                //set velocity to 0,0,0
+                ballRigidBody.velocity = Vector3.zero;
+                //Disable GameObject
+                ball.SetActive(false);
+
+                //Invoke: invokes a method after a period of time. First argument is the methodName, second is the time. When you invoke a method you cannot pass any parameter to it.
+                Invoke(nameof(Respawn), respawnTime);
+            }
         }
     }
 
@@ -120,6 +160,5 @@ public class DeathAndRespawn : MonoBehaviour
         StartCoroutine(levelDelay.Count());
 
         Timer.startTimer();
-        deathCounter--;
     }
 }

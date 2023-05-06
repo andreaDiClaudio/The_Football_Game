@@ -1065,12 +1065,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 1724556363}
   ballRigidBody: {fileID: 1724556365}
-  deathCounter: 3
   player: {fileID: 721856333}
   playerGameObject: {fileID: 721856330}
   playerTransform: {fileID: 721856338}
   respawnTime: 1.5
   levelDelay: {fileID: 870262816}
+  attemptText: {fileID: 484187750}
+  whistleSoundEffect: {fileID: 870262817}
+  crowdCheeringFailureSoundEffect: {fileID: 2052650865}
+  gameOverScreen: {fileID: 1313301894}
 --- !u!114 &721856340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2503,6 +2506,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 761084121006340285, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1989502910}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
 --- !u!1001 &1029665503298416034
