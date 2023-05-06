@@ -1961,6 +1961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 721856333}
   kickPower: 4
+  ballKickedSoundEffect: {fileID: 1467169295}
 --- !u!114 &721856333 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1700627064255241964, guid: 421dce1245a9844a5835ef16857ba7ae, type: 3}
@@ -3316,6 +3317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1467169294}
+  - component: {fileID: 1467169295}
   m_Layer: 0
   m_Name: Ball_Empty
   m_TagString: Untagged
@@ -3340,6 +3342,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467169295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467169293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6f1d128e0514458aca269f4214739b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 743803438}
+  audioClip: {fileID: 8300000, guid: b379db2106707478099f1def10db0d8a, type: 3}
 --- !u!1 &1641613659
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,7 +3786,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f694b7308f2884391b04d60b78066dd8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 12814c5e274b6498facd9bf1c5420529, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1

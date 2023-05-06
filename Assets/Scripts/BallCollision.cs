@@ -10,12 +10,15 @@ public class BallCollision : MonoBehaviour
     [Tooltip("Strength used to kick the ball")]
     public float kickPower;
     [Tooltip("Reference to rigidBody of the ball")]
+    public BallKickedSoundEffect ballKickedSoundEffect;
 
     private void OnTriggerEnter(Collider other)
     {
         Rigidbody rigidbody = other.GetComponent<Rigidbody>();
         if (other.gameObject.layer == 6)
         {
+            ballKickedSoundEffect.PlayBallKicked();
+
             var deltaPosition = rigidbody.transform.position - player.characterController.transform.position;
 
             deltaPosition.y = 0;
