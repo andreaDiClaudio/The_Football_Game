@@ -1325,6 +1325,7 @@ MonoBehaviour:
   playerGameObject: {fileID: 721856330}
   winScreen: {fileID: 622224554}
   pause: {fileID: 721856340}
+  goalCrowdSoundEffect: {fileID: 622224561}
 --- !u!65 &576249335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1352,6 +1353,7 @@ GameObject:
   - component: {fileID: 622224555}
   - component: {fileID: 622224559}
   - component: {fileID: 622224560}
+  - component: {fileID: 622224561}
   m_Layer: 5
   m_Name: Win_Screen
   m_TagString: Untagged
@@ -1467,8 +1469,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ee8d45517b14ee6965b47145a0ef9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1989502910}
   buttonSfx: {fileID: 8300000, guid: 3fa7d0716e0304ed8ab53e31ed783806, type: 3}
+--- !u!114 &622224561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622224554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3902cc8999a8482db600a640bd6f122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1877300778}
+  goalCrowdCheering: {fileID: 8300000, guid: 04a275f60550d4103aeb6131a9bd6e12, type: 3}
 --- !u!1 &655714787
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,7 +2025,7 @@ MonoBehaviour:
   player: {fileID: 721856333}
   playerGameObject: {fileID: 721856330}
   playerTransform: {fileID: 721856338}
-  respawnTime: 1
+  respawnTime: 1.5
   levelDelay: {fileID: 870262816}
 --- !u!114 &721856340
 MonoBehaviour:
@@ -2273,6 +2289,7 @@ MonoBehaviour:
   timeLeft: 3
   hud: {fileID: 655714787}
   pause: {fileID: 721856340}
+  crowdCheeringFailureSoundEffect: {fileID: 2052650865}
 --- !u!114 &870262817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3057,7 +3074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ee8d45517b14ee6965b47145a0ef9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1989502910}
   buttonSfx: {fileID: 8300000, guid: 3fa7d0716e0304ed8ab53e31ed783806, type: 3}
 --- !u!1 &1345770822
 GameObject:
@@ -3753,7 +3770,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d4bfcd9eb30124a6ab3ecc906c5abdea, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f694b7308f2884391b04d60b78066dd8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
@@ -3853,6 +3870,134 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1877300777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1877300779}
+  - component: {fileID: 1877300778}
+  m_Layer: 0
+  m_Name: GoalAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1877300778
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877300777}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1877300779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877300777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.320237, y: 0.49500036, z: 1.0233886}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1898274386
 GameObject:
@@ -4279,6 +4424,7 @@ GameObject:
   - component: {fileID: 2052650861}
   - component: {fileID: 2052650860}
   - component: {fileID: 2052650864}
+  - component: {fileID: 2052650865}
   m_Layer: 0
   m_Name: Game_Boundary
   m_TagString: GameBoundary
@@ -4399,6 +4545,21 @@ MonoBehaviour:
   ball: {fileID: 1724556363}
   ballRigidBody: {fileID: 1724556365}
   whistleSoundEffect: {fileID: 870262817}
+  crowdCheeringFailureSoundEffect: {fileID: 2052650865}
+--- !u!114 &2052650865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052650856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbae473a318e4eff9bc504eba891fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1877300778}
+  audioClip: {fileID: 8300000, guid: 02f072c03dd574ee6bd6d6f8216848a1, type: 3}
 --- !u!1001 &1275299900402843901
 PrefabInstance:
   m_ObjectHideFlags: 0

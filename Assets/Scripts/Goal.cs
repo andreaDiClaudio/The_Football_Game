@@ -23,6 +23,7 @@ public class Goal : MonoBehaviour
     public GameObject winScreen;
     public static bool isGoal = false;
     public Pause pause;
+    public GoalCrowdSoundEffect goalCrowdSoundEffect;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class Goal : MonoBehaviour
         //GameObject goal = gameObject;
         if (other.CompareTag("Ball"))
         {
+            goalCrowdSoundEffect.PlayGoalCheering();
             Win();
         }
     }
@@ -45,7 +47,6 @@ public class Goal : MonoBehaviour
         //Disable pause
         pause.enabled = false;
 
-        isGoal = true;
         /*TIMER*/
         Timer.StopTimer();
 

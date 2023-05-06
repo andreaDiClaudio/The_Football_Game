@@ -10,6 +10,7 @@ public class LevelDelay : MonoBehaviour
     public float timeLeft = 3.0f;
     public GameObject hud;
     public Pause pause;
+    public CrowdCheeringFailureSoundEffect crowdCheeringFailureSoundEffect;
 
     public void Start()
     {
@@ -25,6 +26,11 @@ public class LevelDelay : MonoBehaviour
     }
     public IEnumerator Count()
     {
+        if (timeLeft == 3)
+        {
+            crowdCheeringFailureSoundEffect.StopBooing();
+        }
+
         while (timeLeft > 0)
         {
             pause.enabled = false;

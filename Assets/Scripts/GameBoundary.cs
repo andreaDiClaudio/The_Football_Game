@@ -13,6 +13,7 @@ public class GameBoundary : MonoBehaviour
     public GameObject ball;
     public Rigidbody ballRigidBody;
     public WhistleSoundEffect whistleSoundEffect;
+    public CrowdCheeringFailureSoundEffect crowdCheeringFailureSoundEffect;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class GameBoundary : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             whistleSoundEffect.PlayWhistle();
+            crowdCheeringFailureSoundEffect.PlayBooing();
 
             deathCounter++;
             if (deathCounter == 3)
