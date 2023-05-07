@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 564599596814096082}
   - component: {fileID: 564599596814096072}
   - component: {fileID: 564599596814096084}
-  - component: {fileID: 564599596814096083}
+  - component: {fileID: 933090200156885363}
   m_Layer: 3
   m_Name: Player_Empty
   m_TagString: Player
@@ -620,7 +620,7 @@ MonoBehaviour:
   whistleSoundEffect: {fileID: 0}
   crowdCheeringFailureSoundEffect: {fileID: 0}
   gameOverScreen: {fileID: 0}
---- !u!114 &564599596814096083
+--- !u!114 &933090200156885363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -629,11 +629,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1174325810049329524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ebcda78adf3461db9964626d7f144b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d0644bca6cdb44eab3e514bd112f26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1174325810049329481}
-  kickPower: 4
+  kickPower: 3
   ballKickedSoundEffect: {fileID: 0}
 --- !u!1 &1174325810108437835
 GameObject:

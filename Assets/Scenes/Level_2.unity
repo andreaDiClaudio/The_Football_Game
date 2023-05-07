@@ -5899,6 +5899,10 @@ PrefabInstance:
       propertyPath: crowdCheeringFailureSoundEffect
       value: 
       objectReference: {fileID: 789470878}
+    - target: {fileID: 564599596814096086, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
+      propertyPath: m_Radius
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 1174325810049329482, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5947,7 +5951,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Empty
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 564599596814096083, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
+    - {fileID: 933090200156885363, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
 --- !u!114 &1700627062792597646 stripped
 MonoBehaviour:
@@ -5965,3 +5971,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1174325810049329524, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
   m_PrefabInstance: {fileID: 564599597003643335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1700627062792597684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700627062792597683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0644bca6cdb44eab3e514bd112f26d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1700627062792597646}
+  kickPower: 3.2
+  ballKickedSoundEffect: {fileID: 1940656714}

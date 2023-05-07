@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallCollision : MonoBehaviour
+public class Kick : MonoBehaviour
 {
     [Header("References")]
     [Tooltip("Reference to player")]
