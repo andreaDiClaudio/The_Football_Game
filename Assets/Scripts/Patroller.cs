@@ -12,7 +12,6 @@ public class Patroller : MonoBehaviour
     void Start()
     {
         current = 0;
-        //transform.position = //TODO;
     }
 
     void Update()

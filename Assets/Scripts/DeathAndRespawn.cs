@@ -38,6 +38,8 @@ public class DeathAndRespawn : MonoBehaviour
     public WhistleSoundEffect whistleSoundEffect;
     public CrowdCheeringFailureSoundEffect crowdCheeringFailureSoundEffect;
     public GameObject gameOverScreen;
+    public GameObject obstacle;
+    private Vector3 obstacleInitialPosition;
 
     void Start()
     {
@@ -50,6 +52,8 @@ public class DeathAndRespawn : MonoBehaviour
         ballSpawnRotation = ball.transform.rotation;
 
         gameOverScreen.SetActive(false);
+
+        obstacleInitialPosition = obstacle.transform.position;
     }
 
     void Update()
@@ -156,6 +160,9 @@ public class DeathAndRespawn : MonoBehaviour
         Time.timeScale = 0;
         StartCoroutine(levelDelay.StartLevelDelay());
         StartCoroutine(levelDelay.Count());
+
+        /*OBSTACLE*/
+        obstacle.transform.position = obstacleInitialPosition;
 
         Timer.startTimer();
     }
