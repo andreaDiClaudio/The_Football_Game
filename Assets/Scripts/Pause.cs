@@ -12,6 +12,7 @@ public class Pause : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enabled = true;
         menu.SetActive(false);
     }
 
@@ -20,10 +21,7 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if (levelDelay.timeLeft > 0)
-            {
-                enabled = false;
-            }
+
             if (!Goal.isGoal || !DeathAndRespawn.isBallDead)
             {
                 if (!isMenuVisible)
@@ -45,6 +43,7 @@ public class Pause : MonoBehaviour
     {
         isMenuVisible = true;
         menu.SetActive(true);
+        Debug.Log("Teoricamente è on");
         //Freeze all; pause every object that is time-based.
         Time.timeScale = 0;
         //Pauses the audio

@@ -9,8 +9,8 @@ public class LevelDelay : MonoBehaviour
     public TMP_Text countdownText;
     public float timeLeft = 3.0f;
     public GameObject hud;
-    public Pause pause;
     public CrowdCheeringFailureSoundEffect crowdCheeringFailureSoundEffect;
+    public Pause pause;
 
     public void Start()
     {
@@ -33,12 +33,14 @@ public class LevelDelay : MonoBehaviour
 
         while (timeLeft > 0)
         {
+            //TODO disable pause
             pause.enabled = false;
             hud.SetActive(false);
             countdownText.text = timeLeft.ToString();
             yield return new WaitForSecondsRealtime(1.0f);
             timeLeft--;
         }
+        //TODO enable puase 
         pause.enabled = true;
         hud.SetActive(true);
         countdownGameObject.SetActive(false);

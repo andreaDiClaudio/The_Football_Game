@@ -45,7 +45,7 @@ public class Goal : MonoBehaviour
     public void Win()
     {
         //Disable pause
-        pause.enabled = false;
+        //TODO
 
         /*TIMER*/
         Timer.StopTimer();
