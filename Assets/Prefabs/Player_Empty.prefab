@@ -549,7 +549,7 @@ MonoBehaviour:
   characterController: {fileID: 564599596814096086}
   player: {fileID: 1174325810049329524}
   movementSpeed: 8
-  timeToMaxSpeed: 1
+  timeToMaxSpeed: 0.8
   timeToLoseMaxSpeed: 0.3
   reverseMomentumMultiplier: 3
 --- !u!143 &564599596814096086
@@ -620,6 +620,7 @@ MonoBehaviour:
   whistleSoundEffect: {fileID: 0}
   crowdCheeringFailureSoundEffect: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  obstacle: {fileID: 0}
 --- !u!114 &933090200156885363
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -151,7 +151,7 @@ public class Player : MonoBehaviour
             {
                 var toLookRotation = Quaternion.LookRotation(movementVelocity);
                 // Slerp in a slow way from having one rotation to a target rotation
-                transform.rotation = Quaternion.Slerp(transform.rotation, toLookRotation, .1f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, toLookRotation, .8f);
             }
         }
     }

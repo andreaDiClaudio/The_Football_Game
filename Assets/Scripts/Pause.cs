@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
     public GameObject menu;
     private bool isMenuVisible = false;
     public AudioSource audioSource;
+    public LevelDelay levelDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,10 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            if (levelDelay.timeLeft > 0)
+            {
+                enabled = false;
+            }
             if (!Goal.isGoal || !DeathAndRespawn.isBallDead)
             {
                 if (!isMenuVisible)

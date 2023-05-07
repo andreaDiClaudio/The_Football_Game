@@ -2315,7 +2315,7 @@ PrefabInstance:
     - target: {fileID: 7656576581775091959, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: pause
       value: 
-      objectReference: {fileID: 822433713}
+      objectReference: {fileID: 893117189}
     - target: {fileID: 7656576581775091959, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: crowdCheeringFailureSoundEffect
       value: 

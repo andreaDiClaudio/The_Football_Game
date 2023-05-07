@@ -3950,6 +3950,11 @@ PrefabInstance:
       objectReference: {fileID: 466997011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a31321cfd41d949f3a8b851c249ba33d, type: 3}
+--- !u!1 &2050017780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 635359739703040392, guid: a31321cfd41d949f3a8b851c249ba33d, type: 3}
+  m_PrefabInstance: {fileID: 2050017779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2076909211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4056,7 +4061,7 @@ PrefabInstance:
     - target: {fileID: 7656576581775091959, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: pause
       value: 
-      objectReference: {fileID: 466997007}
+      objectReference: {fileID: 467757466}
     - target: {fileID: 7656576581775091959, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: crowdCheeringFailureSoundEffect
       value: 
@@ -4224,6 +4229,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1736895073}
     - target: {fileID: 564599596814096084, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
+      propertyPath: obstacle
+      value: 
+      objectReference: {fileID: 2050017780}
+    - target: {fileID: 564599596814096084, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: levelDelay
       value: 
       objectReference: {fileID: 1268171909}
@@ -4336,7 +4345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1700627062792597646}
-  kickPower: 3.2
+  kickPower: 2.5
   ballKickedSoundEffect: {fileID: 1940656714}
 --- !u!1001 &6779466611312053529
 PrefabInstance:

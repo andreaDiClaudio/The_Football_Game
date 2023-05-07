@@ -14,6 +14,7 @@ public class LevelDelay : MonoBehaviour
 
     public void Start()
     {
+        pause.enabled = false;
         Time.timeScale = 0;
         StartCoroutine(StartLevelDelay());
         StartCoroutine(Count());
