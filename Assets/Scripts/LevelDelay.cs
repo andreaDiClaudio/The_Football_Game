@@ -14,6 +14,7 @@ public class LevelDelay : MonoBehaviour
 
     public void Start()
     {
+        pause.gameObject.SetActive(false);
         Time.timeScale = 0;
         StartCoroutine(StartLevelDelay());
         StartCoroutine(Count());
@@ -33,17 +34,17 @@ public class LevelDelay : MonoBehaviour
 
         while (timeLeft > 0)
         {
-            //TODO disable pause
             pause.enabled = false;
             hud.SetActive(false);
             countdownText.text = timeLeft.ToString();
             yield return new WaitForSecondsRealtime(1.0f);
             timeLeft--;
         }
-        //TODO enable puase 
         pause.enabled = true;
         hud.SetActive(true);
         countdownGameObject.SetActive(false);
+        pause.gameObject.SetActive(true);
         Timer.startTimer();
+
     }
 }

@@ -43,7 +43,6 @@ public class Pause : MonoBehaviour
     {
         isMenuVisible = true;
         menu.SetActive(true);
-        Debug.Log("Teoricamente è on");
         //Freeze all; pause every object that is time-based.
         Time.timeScale = 0;
         //Pauses the audio

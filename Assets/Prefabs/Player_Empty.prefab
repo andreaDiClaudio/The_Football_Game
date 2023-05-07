@@ -549,7 +549,7 @@ MonoBehaviour:
   characterController: {fileID: 564599596814096086}
   player: {fileID: 1174325810049329524}
   movementSpeed: 8
-  timeToMaxSpeed: 0.8
+  timeToMaxSpeed: 0.6
   timeToLoseMaxSpeed: 0.3
   reverseMomentumMultiplier: 3
 --- !u!143 &564599596814096086
@@ -597,6 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
   audioSource: {fileID: 0}
+  levelDelay: {fileID: 0}
 --- !u!114 &564599596814096084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,7 +621,6 @@ MonoBehaviour:
   whistleSoundEffect: {fileID: 0}
   crowdCheeringFailureSoundEffect: {fileID: 0}
   gameOverScreen: {fileID: 0}
-  obstacle: {fileID: 0}
 --- !u!114 &933090200156885363
 MonoBehaviour:
   m_ObjectHideFlags: 0

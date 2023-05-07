@@ -487,6 +487,10 @@ PrefabInstance:
       propertyPath: ballKickedSoundEffect
       value: 
       objectReference: {fileID: 2012952490}
+    - target: {fileID: 1174325810049329481, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
+      propertyPath: timeToMaxSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1174325810049329482, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: m_RootOrder
       value: 14
