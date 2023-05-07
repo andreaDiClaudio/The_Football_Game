@@ -24,8 +24,11 @@ public class Kick : MonoBehaviour
             deltaPosition.y = 0;
 
             var forward = deltaPosition.normalized;
-
-            rigidbody.AddForce(forward * kickPower, ForceMode.Impulse); //TODO Improve thhis like try to multiply the kickpower with the player speed.
+            if (rigidbody.velocity.magnitude == 0)
+            {
+                rigidbody.AddForce(forward * (kickPower * 1.2f), ForceMode.Impulse);
+            }
+            rigidbody.AddForce(forward * (kickPower * 1.4f), ForceMode.Impulse);
         }
     }
 }
