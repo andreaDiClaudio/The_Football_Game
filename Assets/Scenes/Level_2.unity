@@ -4061,7 +4061,7 @@ PrefabInstance:
     - target: {fileID: 7656576581775091959, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: pause
       value: 
-      objectReference: {fileID: 467757466}
+      objectReference: {fileID: 466997007}
     - target: {fileID: 7656576581775091959, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: crowdCheeringFailureSoundEffect
       value: 
@@ -4216,6 +4216,10 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 467757466}
+    - target: {fileID: 564599596814096072, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
+      propertyPath: levelDelay
+      value: 
+      objectReference: {fileID: 1268171909}
     - target: {fileID: 564599596814096072, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: audioSource
       value: 

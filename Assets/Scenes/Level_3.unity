@@ -388,6 +388,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 893117189}
     - target: {fileID: 564599596814096072, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
+      propertyPath: levelDelay
+      value: 
+      objectReference: {fileID: 1636876532}
+    - target: {fileID: 564599596814096072, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 249263536}
@@ -2315,7 +2319,7 @@ PrefabInstance:
     - target: {fileID: 7656576581775091959, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: pause
       value: 
-      objectReference: {fileID: 893117189}
+      objectReference: {fileID: 822433713}
     - target: {fileID: 7656576581775091959, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: crowdCheeringFailureSoundEffect
       value: 
@@ -2668,6 +2672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37091657}
     m_Modifications:
+    - target: {fileID: 199002462122452434, guid: ac3e592f7d6a04efe9b4298ee9e492cf, type: 3}
+      propertyPath: deathAndRespawn
+      value: 
+      objectReference: {fileID: 822433712}
     - target: {fileID: 2093890227403293210, guid: ac3e592f7d6a04efe9b4298ee9e492cf, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.56
