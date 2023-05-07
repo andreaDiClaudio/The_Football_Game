@@ -40,6 +40,7 @@ public class DeathAndRespawn : MonoBehaviour
     public GameObject gameOverScreen;
     //public GameObject obstacle;
     private Vector3 obstacleInitialPosition;
+    public Pause pause;
 
     void Start()
     {
@@ -63,6 +64,7 @@ public class DeathAndRespawn : MonoBehaviour
 
     public void Die()
     {
+        pause.enabled = false;
         if (!isBallDead)
         {
             whistleSoundEffect.PlayWhistle();
@@ -163,6 +165,8 @@ public class DeathAndRespawn : MonoBehaviour
 
         /*OBSTACLE*/
         //obstacle.transform.position = obstacleInitialPosition;
+
+        pause.enabled = true;
 
         Timer.startTimer();
     }
