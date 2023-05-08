@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Timer : MonoBehaviour
     static float startTime;
     public static bool isTimerActive = false;
     static float elapsedTime;
+    public DeathAndRespawn deathAndRespawn;
+    public string seconds;
 
     void Update()
     {
@@ -16,9 +19,17 @@ public class Timer : MonoBehaviour
         {
             elapsedTime = Time.time - startTime;
             string minutes = ((int)elapsedTime / 60).ToString();
-            string seconds = (elapsedTime % 60).ToString("f2");
+            seconds = (elapsedTime % 60).ToString("f2");
             string timerText = minutes + ":" + seconds;
             clockText.text = timerText;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (seconds == "2.00") //WORKING TODO text during countdown to show player time limit. and make the player die.
+            {
+                Debug.Log("Elapsed time is 2 seconds!");
+            }
         }
     }
 
