@@ -1147,6 +1147,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: deathAndRespawn
+      value: 
+      objectReference: {fileID: 822433712}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
 --- !u!114 &677977099 stripped
@@ -1175,7 +1179,6 @@ GameObject:
   m_Component:
   - component: {fileID: 678614975}
   - component: {fileID: 678614978}
-  - component: {fileID: 678614977}
   - component: {fileID: 678614976}
   m_Layer: 0
   m_Name: Player_Camera
@@ -1213,14 +1216,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 143934607}
   offset: {x: 0, y: 2, z: -4}
---- !u!81 &678614977
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678614974}
-  m_Enabled: 1
 --- !u!20 &678614978
 Camera:
   m_ObjectHideFlags: 0
@@ -1747,6 +1742,10 @@ PrefabInstance:
     - target: {fileID: 761084121595011054, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Pause, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3903861121409688606, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: m_text
+      value: 'Time Limit : 60 seconds'
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 761084121006340282, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
@@ -2466,6 +2465,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3911974999486026289, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_text
+      value: 'Time Limit : 60 seconds'
+      objectReference: {fileID: 0}
     - target: {fileID: 7656576581775091912, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
