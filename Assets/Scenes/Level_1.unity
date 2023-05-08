@@ -291,6 +291,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1586753375032373626, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1504.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586753375032373626, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1075.273
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586753375032373626, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -770.96576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586753375032373626, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 480.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586753375433466277, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1075.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586753375433466277, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 480.84222
+      objectReference: {fileID: 0}
     - target: {fileID: 1586753375470543299, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
       propertyPath: m_Name
       value: Hud

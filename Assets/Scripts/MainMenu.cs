@@ -18,8 +18,8 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        level2Button.gameObject.SetActive(ProgressionManager.IsLevelUnlocked(0));
-        level3Button.gameObject.SetActive(ProgressionManager.IsLevelUnlocked(1));
+        level2Button.gameObject.SetActive(ProgressionManager.IsLevelUnlocked(1));
+        level3Button.gameObject.SetActive(ProgressionManager.IsLevelUnlocked(2));
     }
 
     public void PlayMainMenu()
@@ -34,7 +34,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayLevel2()
     {
-        if (ProgressionManager.IsLevelUnlocked(0))
+        if (ProgressionManager.IsLevelUnlocked(1))
         {
             SceneManager.LoadScene(2);
         }
@@ -46,7 +46,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayLevel3()
     {
-        if (ProgressionManager.IsLevelUnlocked(1))
+        if (ProgressionManager.IsLevelUnlocked(2))
         {
             SceneManager.LoadScene(3);
         }
