@@ -64,6 +64,9 @@ public class Goal : MonoBehaviour
 
         //Shows Win hud
         winScreen.SetActive(true);
+
+        //
+        ProgressionManager.UnlockLevel(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadMainMenu()
