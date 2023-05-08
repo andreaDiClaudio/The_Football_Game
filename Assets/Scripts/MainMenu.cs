@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button level1Button;
     [SerializeField] private Button level2Button;
     [SerializeField] private Button level3Button;
+    public GameObject canvas;
+    public bool isCommandsActive = false;
 
     private void Start()
     {
@@ -14,6 +16,7 @@ public class MainMenu : MonoBehaviour
         level1Button.gameObject.SetActive(true);
         level2Button.gameObject.SetActive(false);
         level3Button.gameObject.SetActive(false);
+        canvas.SetActive(false);
     }
 
     void Update()
@@ -53,6 +56,21 @@ public class MainMenu : MonoBehaviour
         else
         {
             Debug.LogWarning("Level 3 is locked.");
+        }
+    }
+
+    public void PlayCommands()
+    {
+        if (isCommandsActive)
+        {
+            canvas.SetActive(false);
+            isCommandsActive = false;
+            Debug.Log(isCommandsActive);
+        }
+        else
+        {
+            canvas.SetActive(true);
+            isCommandsActive = true;
         }
     }
 
