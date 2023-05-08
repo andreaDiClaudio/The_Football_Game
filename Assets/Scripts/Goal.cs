@@ -65,8 +65,11 @@ public class Goal : MonoBehaviour
         //Shows Win hud
         winScreen.SetActive(true);
 
-        //
+        //Progression
         ProgressionManager.UnlockLevel(SceneManager.GetActiveScene().buildIndex);
+
+        //
+        DeathAndRespawn.deathCounter = 3;
     }
 
     public void LoadMainMenu()
