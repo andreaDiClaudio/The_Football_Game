@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -277.1579, y: -136.7101}
+  m_AnchoredPosition: {x: -0.00048828125, y: 0}
+  m_SizeDelta: {x: -0.001, y: -609.897}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6393715933075364352
 CanvasRenderer:
@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000060782, y: 128.87}
+  m_AnchoredPosition: {x: 0, y: 47}
   m_SizeDelta: {x: 936.6974, y: 312.7357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6393715933447307072
@@ -248,7 +248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000060782, y: -96}
+  m_AnchoredPosition: {x: 0.000016213726, y: -177.86993}
   m_SizeDelta: {x: 314.649, y: 58.9967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6393715933537156128
@@ -475,6 +475,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8045d1d81c3ff4a8ca667a38cec69200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1Button: {fileID: 0}
+  level2Button: {fileID: 0}
+  level3Button: {fileID: 0}
 --- !u!114 &6393715933631591527
 MonoBehaviour:
   m_ObjectHideFlags: 0
