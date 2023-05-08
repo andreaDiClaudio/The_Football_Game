@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
     [Header("Camera initial position")]
     private Vector3 initialPosition;
     [Header("Camera rotation initial position")]
     private Quaternion initialRotation;
     [Header("Reference to ball")]
-    public Transform ballTransform;
+    public Transform playerTransform;
     [Header("Distance of the camera from the ball")]
     public Vector3 offset;
 
@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
     //Called once per frame, after all the Update() functions have been called.
     void LateUpdate()
     {
-        transform.position = ballTransform.position + offset;
+        transform.position = playerTransform.position + offset;
     }
 
     // Reset the camera position and rotation to the initial values
