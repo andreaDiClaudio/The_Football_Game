@@ -12,23 +12,36 @@ public class Timer : MonoBehaviour
     static float elapsedTime;
     public DeathAndRespawn deathAndRespawn;
     public string seconds;
+    public string minutes;
 
     void Update()
     {
         if (isTimerActive)
         {
             elapsedTime = Time.time - startTime;
-            string minutes = ((int)elapsedTime / 60).ToString();
+            minutes = ((int)elapsedTime / 60).ToString();
             seconds = (elapsedTime % 60).ToString("f2");
             string timerText = minutes + ":" + seconds;
             clockText.text = timerText;
         }
-
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (minutes == "1")
         {
-            if (seconds == "2.00") //WORKING TODO text during countdown to show player time limit. and make the player die.
+            Debug.Log(minutes);
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            if (seconds == "45.00")
             {
-                Debug.Log("Elapsed time is 2 seconds!");
+                deathAndRespawn.Die();
+            }
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+
+        {
+            if (minutes == "1")
+            {
+                deathAndRespawn.Die();
             }
         }
     }

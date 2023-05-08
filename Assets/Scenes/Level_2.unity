@@ -1211,7 +1211,6 @@ GameObject:
   m_Component:
   - component: {fileID: 664047547}
   - component: {fileID: 664047550}
-  - component: {fileID: 664047549}
   - component: {fileID: 664047548}
   m_Layer: 0
   m_Name: Player_Camera
@@ -1249,14 +1248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 564599597003643336}
   offset: {x: 0, y: 2, z: -4}
---- !u!81 &664047549
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664047546}
-  m_Enabled: 1
 --- !u!20 &664047550
 Camera:
   m_ObjectHideFlags: 0
@@ -1665,6 +1656,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: deathAndRespawn
+      value: 
+      objectReference: {fileID: 466997011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
 --- !u!4 &776266016 stripped
@@ -1841,6 +1836,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 267533124}
     m_Modifications:
+    - target: {fileID: 761084120729655744, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 588.834
+      objectReference: {fileID: 0}
+    - target: {fileID: 761084120729655744, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 78.143
+      objectReference: {fileID: 0}
+    - target: {fileID: 761084120729655744, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030518
+      objectReference: {fileID: 0}
+    - target: {fileID: 761084120729655744, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -62
+      objectReference: {fileID: 0}
+    - target: {fileID: 761084120729655747, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 761084120729655747, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 761084121006340279, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
       propertyPath: m_Name
       value: Pause
@@ -3878,6 +3897,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275353601826088061, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7656576581775091912, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3982,6 +4005,14 @@ PrefabInstance:
       propertyPath: crowdCheeringFailureSoundEffect
       value: 
       objectReference: {fileID: 789470878}
+    - target: {fileID: 7656576582575265759, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -651.585
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656576582575265759, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.207
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
 --- !u!1001 &2090873384
@@ -4061,7 +4092,7 @@ GameObject:
   - component: {fileID: 2095668317}
   - component: {fileID: 2095668318}
   m_Layer: 0
-  m_Name: Player_Emptu_parent
+  m_Name: mptu_parenty_parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
