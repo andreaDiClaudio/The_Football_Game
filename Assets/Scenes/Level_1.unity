@@ -212,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120765849}
   m_LocalRotation: {x: 0.23575252, y: -0, z: -0, w: 0.9718132}
-  m_LocalPosition: {x: 0, y: 3, z: -11}
+  m_LocalPosition: {x: 0, y: 3, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballTransform: {fileID: 1224848729}
-  offset: {x: 0, y: 3, z: -11}
+  offset: {x: 0, y: 3, z: -8}
 --- !u!81 &120765852
 AudioListener:
   m_ObjectHideFlags: 0
@@ -645,7 +645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757758986}
   m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -0.28416467, y: 3, z: -6}
+  m_LocalPosition: {x: -0.28416467, y: 2, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1921215958}
-  offset: {x: 0, y: 3, z: -6}
+  offset: {x: 0, y: 2, z: -4}
 --- !u!81 &757758989
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1871,7 +1871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174325810049329482, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.13
       objectReference: {fileID: 0}
     - target: {fileID: 1174325810049329482, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: m_LocalRotation.w
