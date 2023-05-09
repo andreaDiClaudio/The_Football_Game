@@ -20,15 +20,15 @@ It has many static obstacles and the pitch is longer.
 ### Level 3
 It has a mix of static and dynamic obstacles.
 
-### Additional Features
+## Additional Features
 
-## Progression
+### Progression
 You cannot enter a level without having completed the previous level.
-## The Streaker
+### The Streaker
 A random event in level 3 where a streaker might cross the pitch.
-## The multi-camera angle
+### The multi-camera angle
 Can switch between to cameras. The default camera will follow the ball, while the second camera will follow the player.
-## The Time-Limit and record tables
+### The Time-Limit and record tables
 Levels must be completed under 45 seconds. Once the level is completed the time taken to beat it will be saved and displayed in the scoreboard (visible in the main menu).
 
 
