@@ -121,6 +121,9 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        PlayerPrefs.SetString("Level1Score", "Level 1: none");
+        PlayerPrefs.SetString("Level2Score", "Level 1: none");
+        PlayerPrefs.SetString("Level3Score", "Level 1: none");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
