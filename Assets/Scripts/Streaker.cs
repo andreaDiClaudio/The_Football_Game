@@ -59,13 +59,12 @@ public class Streaker : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            audioSource.clip = audioClip;
-            audioSource.Play();
-
             int randomNumber = Random.Range(0, 11);
             if (randomNumber == 5)
             {
                 isTriggered = true;
+                audioSource.clip = audioClip;
+                audioSource.Play();
             }
         }
     }
