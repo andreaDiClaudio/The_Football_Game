@@ -1148,6 +1148,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 79419804718b94506b85d5beb957f9ab, type: 3}
+    - target: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 53812069}
+    - target: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
       propertyPath: deathAndRespawn
       value: 
       objectReference: {fileID: 822433712}
@@ -1169,6 +1177,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1586753375470543299, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
   m_PrefabInstance: {fileID: 677977098}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &677977101 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+  m_PrefabInstance: {fileID: 677977098}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677977100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e043ad10370fe4a0090123d8f5107231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &678614974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2455,10 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 71136227}
+    - target: {fileID: 6779466612001715766, guid: fd97a8648ceb6463b83f920f82bf4101, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 677977101}
     - target: {fileID: 6779466612001715766, guid: fd97a8648ceb6463b83f920f82bf4101, type: 3}
       propertyPath: player
       value: 

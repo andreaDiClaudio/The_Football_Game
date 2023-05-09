@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -44,7 +45,7 @@ public class Timer : MonoBehaviour
             }
 
             minutes = Mathf.FloorToInt(elapsedTime / 60f).ToString("00");
-            seconds = Mathf.FloorToInt(elapsedTime % 60f).ToString("00");
+            seconds = (elapsedTime % 60f).ToString("F2");
 
             string timerText = minutes + ":" + seconds;
             clockText.text = timerText;

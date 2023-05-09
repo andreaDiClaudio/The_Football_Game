@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Goal : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Goal : MonoBehaviour
     public Pause pause;
     public GoalCrowdSoundEffect goalCrowdSoundEffect;
 
+    public Timer timer;
+
     void Start()
     {
         winScreen.SetActive(false);
@@ -39,7 +42,21 @@ public class Goal : MonoBehaviour
         {
             goalCrowdSoundEffect.PlayGoalCheering();
             Win();
-            //Take the time and save it in a variable and show it as a scoreboard in the menu
+
+            // Take the time and save it in a variable
+            string secondsLeft = timer.seconds;
+            float secondsLeftToFloat = float.Parse(secondsLeft);
+            float timeTaken = 45f - secondsLeftToFloat;
+
+            // Convert the time taken to a string with two decimal places
+            string stringTimeTaken = timeTaken.ToString("F2");
+
+            // Get the previous score from a local variable
+            int levelIndex = SceneManager.GetActiveScene().buildIndex - 1;
+
+            // The new score is better than the previous one, so update the scoreboard and save the new score
+            PlayerPrefs.SetFloat("Level" + levelIndex.ToString() + "Score", timeTaken);
+            MainMenu.UpdateScoreboard(levelIndex, stringTimeTaken);
 
         }
     }
