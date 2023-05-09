@@ -1059,6 +1059,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1586753375032373626, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1498.852
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586753375032373626, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -773.5712
+      objectReference: {fileID: 0}
     - target: {fileID: 1586753375470543299, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
       propertyPath: m_Name
       value: Hud
@@ -1658,6 +1666,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 71136226}
     m_Modifications:
+    - target: {fileID: 761084120431741188, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 179.344
+      objectReference: {fileID: 0}
     - target: {fileID: 761084121006340279, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
       propertyPath: m_Name
       value: Pause
@@ -2488,9 +2500,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275353601826088061, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00009346
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275353601826088061, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -208.861
+      objectReference: {fileID: 0}
     - target: {fileID: 3911974999486026289, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_text
       value: 'Time Limit : 45 seconds'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656576581273371587, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000011444
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656576581273371587, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 62.679005
       objectReference: {fileID: 0}
     - target: {fileID: 7656576581775091912, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_Pivot.x
@@ -2596,6 +2624,14 @@ PrefabInstance:
       propertyPath: crowdCheeringFailureSoundEffect
       value: 
       objectReference: {fileID: 1783400228}
+    - target: {fileID: 7656576582575265759, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656576582575265759, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
 --- !u!114 &1636876531 stripped
