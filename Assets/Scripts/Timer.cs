@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,44 +14,50 @@ public class Timer : MonoBehaviour
     public DeathAndRespawn deathAndRespawn;
     public string seconds;
     public string minutes;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
 
     void Update()
     {
         if (isTimerActive)
         {
-            elapsedTime = Time.time - startTime;
-            minutes = ((int)elapsedTime / 60).ToString();
-            seconds = (elapsedTime % 60).ToString("f2");
+            if (elapsedTime < 5f)
+            {
+                clockText.color = Color.red;
+
+                if (Mathf.FloorToInt(elapsedTime) != Mathf.FloorToInt(elapsedTime + Time.deltaTime))
+                {
+                    audioSource.clip = audioClip;
+                    audioSource.Play();
+                }
+            }
+            else
+            {
+                clockText.color = Color.white;
+            }
+
+            elapsedTime = startTime - Time.time;
+            if (elapsedTime < 0f)
+            {
+                elapsedTime = 0f;
+                isTimerActive = false;
+                deathAndRespawn.Die();
+            }
+
+            minutes = Mathf.FloorToInt(elapsedTime / 60f).ToString("00");
+            seconds = (elapsedTime % 60f).ToString("F2");
+
             string timerText = minutes + ":" + seconds;
             clockText.text = timerText;
-        }
-        if (minutes == "1")
-        {
-            Debug.Log(minutes);
-        }
 
-        if (SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            if (seconds == "45.00")
-            {
-                deathAndRespawn.Die();
-            }
-        }
-        if (SceneManager.GetActiveScene().buildIndex == 3)
-
-        {
-            if (minutes == "1")
-            {
-                deathAndRespawn.Die();
-            }
         }
     }
 
-    public static void startTimer()
+    public static void StartTimer()
     {
         isTimerActive = true;
-        elapsedTime = 0;
-        startTime = Time.time;
+        elapsedTime = 45f;
+        startTime = Time.time + elapsedTime;
     }
 
     public static void StopTimer()

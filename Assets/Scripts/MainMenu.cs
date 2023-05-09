@@ -1,14 +1,23 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Button level1Button;
     [SerializeField] private Button level2Button;
     [SerializeField] private Button level3Button;
-    public GameObject canvas;
+    public GameObject commandsCanvas;
     public bool isCommandsActive = false;
+    public GameObject scoreboardCanvas;
+    public bool isScoreboardActive = false;
+
+    public TMP_Text level1Result;
+    public TMP_Text level2Result;
+    public TMP_Text level3Result;
+    public static string[] scoreboard;
 
     private void Start()
     {
@@ -16,13 +25,35 @@ public class MainMenu : MonoBehaviour
         level1Button.gameObject.SetActive(true);
         level2Button.gameObject.SetActive(false);
         level3Button.gameObject.SetActive(false);
-        canvas.SetActive(false);
+        commandsCanvas.SetActive(false);
+        scoreboardCanvas.SetActive(false);
+
+        // Load the scoreboard values from PlayerPrefs
+        scoreboard = new string[] { "", "", "" };
+        scoreboard[0] = PlayerPrefs.GetString("Level1Score", "Level 1: none");
+        scoreboard[1] = PlayerPrefs.GetString("Level2Score", "Level 2: none");
+        scoreboard[2] = PlayerPrefs.GetString("Level3Score", "Level 3: none");
     }
 
     void Update()
     {
         level2Button.gameObject.SetActive(ProgressionManager.IsLevelUnlocked(1));
         level3Button.gameObject.SetActive(ProgressionManager.IsLevelUnlocked(2));
+
+        level1Result.text = scoreboard[0];
+        level2Result.text = scoreboard[1];
+        level3Result.text = scoreboard[2];
+    }
+
+
+    public static void UpdateScoreboard(int levelIndex, string scoreText)
+    {
+
+        // Update the scoreboard array with the new score
+        scoreboard[levelIndex] = "Level " + (levelIndex + 1) + ": " + scoreText + " seconds";
+        PlayerPrefs.SetString("Level1Score", scoreboard[0]);
+        PlayerPrefs.SetString("Level2Score", scoreboard[1]);
+        PlayerPrefs.SetString("Level3Score", scoreboard[2]);
     }
 
     public void PlayMainMenu()
@@ -63,14 +94,28 @@ public class MainMenu : MonoBehaviour
     {
         if (isCommandsActive)
         {
-            canvas.SetActive(false);
+            commandsCanvas.SetActive(false);
             isCommandsActive = false;
             Debug.Log(isCommandsActive);
         }
         else
         {
-            canvas.SetActive(true);
+            commandsCanvas.SetActive(true);
             isCommandsActive = true;
+        }
+    }
+
+    public void ShowScoreboard()
+    {
+        if (isScoreboardActive)
+        {
+            scoreboardCanvas.SetActive(false);
+            isScoreboardActive = false;
+        }
+        else
+        {
+            scoreboardCanvas.SetActive(true);
+            isScoreboardActive = true;
         }
     }
 

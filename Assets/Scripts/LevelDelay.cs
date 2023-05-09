@@ -44,7 +44,7 @@ public class LevelDelay : MonoBehaviour
         hud.SetActive(true);
         countdownGameObject.SetActive(false);
         pause.gameObject.SetActive(true);
-        Timer.startTimer();
+        Timer.StartTimer();
 
     }
 }

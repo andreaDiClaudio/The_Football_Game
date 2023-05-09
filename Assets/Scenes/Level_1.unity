@@ -404,6 +404,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 79419804718b94506b85d5beb957f9ab, type: 3}
+    - target: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 841764194}
+    - target: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
       propertyPath: deathAndRespawn
       value: 
       objectReference: {fileID: 1921215952}
@@ -425,6 +433,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1586753375470543299, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
   m_PrefabInstance: {fileID: 440403780}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &440403786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1586753375470543304, guid: 2422dd5b3b9d742b18deb8d808668105, type: 3}
+  m_PrefabInstance: {fileID: 440403780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440403782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e043ad10370fe4a0090123d8f5107231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &546992738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -580,6 +599,10 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 1820046551}
+    - target: {fileID: 6779466612001715766, guid: fd97a8648ceb6463b83f920f82bf4101, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 440403786}
     - target: {fileID: 6779466612001715766, guid: fd97a8648ceb6463b83f920f82bf4101, type: 3}
       propertyPath: player
       value: 
@@ -865,11 +888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3903861121409688606, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
       propertyPath: m_text
-      value: 'Time Limit : 15 seconds'
+      value: 'Time Limit : 45 seconds'
       objectReference: {fileID: 0}
     - target: {fileID: 4080592345135057689, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 761084121006340282, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
@@ -1227,11 +1250,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1275353601826088061, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275353601826088061, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000091552734
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275353601826088061, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -220.22998
       objectReference: {fileID: 0}
     - target: {fileID: 3911974999486026289, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_text
-      value: 'Time Limit : 15 seconds'
+      value: 'Time Limit : 45 seconds'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656576581273371587, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656576581273371587, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 51.31001
       objectReference: {fileID: 0}
     - target: {fileID: 7656576581775091912, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_Pivot.x
@@ -1342,8 +1381,12 @@ PrefabInstance:
       value: -643.38
       objectReference: {fileID: 0}
     - target: {fileID: 7656576582575265759, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656576582575265759, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -85.31
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
