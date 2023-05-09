@@ -13,11 +13,28 @@ public class Timer : MonoBehaviour
     public DeathAndRespawn deathAndRespawn;
     public string seconds;
     public string minutes;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
 
     void Update()
     {
         if (isTimerActive)
         {
+            if (elapsedTime < 5f)
+            {
+                clockText.color = Color.red;
+
+                if (Mathf.FloorToInt(elapsedTime) != Mathf.FloorToInt(elapsedTime + Time.deltaTime))
+                {
+                    audioSource.clip = audioClip;
+                    audioSource.Play();
+                }
+            }
+            else
+            {
+                clockText.color = Color.white;
+            }
+
             elapsedTime = startTime - Time.time;
             if (elapsedTime < 0f)
             {
@@ -31,6 +48,7 @@ public class Timer : MonoBehaviour
 
             string timerText = minutes + ":" + seconds;
             clockText.text = timerText;
+
         }
     }
 
