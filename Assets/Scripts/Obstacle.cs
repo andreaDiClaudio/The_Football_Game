@@ -7,7 +7,7 @@ public class Obstacle : MonoBehaviour
     public DeathAndRespawn deathAndRespawn;
     public void OnTriggerEnter(Collider other)
     {
-        Rigidbody rigidbody = other.GetComponent<Rigidbody>();
+        //Rigidbody rigidbody = other.GetComponent<Rigidbody>();
         if (other.gameObject.layer == 6)
         {
             deathAndRespawn.Die();

@@ -1745,7 +1745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3903861121409688606, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
       propertyPath: m_text
-      value: 'Time Limit : 60 seconds'
+      value: 'Time Limit : 45 seconds'
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 761084121006340282, guid: 14024c4776ff04bfd9289070bbd20461, type: 3}
@@ -2467,7 +2467,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3911974999486026289, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_text
-      value: 'Time Limit : 60 seconds'
+      value: 'Time Limit : 45 seconds'
       objectReference: {fileID: 0}
     - target: {fileID: 7656576581775091912, guid: 67122205b9f024259a78a45d95c3229a, type: 3}
       propertyPath: m_Pivot.x

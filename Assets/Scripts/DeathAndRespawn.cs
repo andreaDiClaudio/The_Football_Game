@@ -168,6 +168,6 @@ public class DeathAndRespawn : MonoBehaviour
 
         pause.enabled = true;
 
-        Timer.startTimer();
+        Timer.StartTimer();
     }
 }

@@ -39,6 +39,8 @@ public class Goal : MonoBehaviour
         {
             goalCrowdSoundEffect.PlayGoalCheering();
             Win();
+            //Take the time and save it in a variable and show it as a scoreboard in the menu
+
         }
     }
 
@@ -61,6 +63,8 @@ public class Goal : MonoBehaviour
         //set velocity and rotation to 0,0,0
         ballRigidBody.velocity = Vector3.zero;
         ballRigidBody.angularVelocity = Vector3.zero;
+        ball.SetActive(false);
+
 
         //Shows Win hud
         winScreen.SetActive(true);
@@ -68,8 +72,9 @@ public class Goal : MonoBehaviour
         //Progression
         ProgressionManager.UnlockLevel(SceneManager.GetActiveScene().buildIndex);
 
-        //
+        //Reset Lifes
         DeathAndRespawn.deathCounter = 3;
+
     }
 
     public void LoadMainMenu()

@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button level3Button;
     public GameObject canvas;
     public bool isCommandsActive = false;
+    public string[] scoreboard;
 
     private void Start()
     {
@@ -71,6 +72,14 @@ public class MainMenu : MonoBehaviour
         {
             canvas.SetActive(true);
             isCommandsActive = true;
+        }
+    }
+
+    public void ShowScoreboard()
+    {
+        for (int i = 0; i < scoreboard.Length; i++)
+        {
+            //TODO
         }
     }
 
