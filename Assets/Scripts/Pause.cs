@@ -5,10 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
+    [Header("Menu Settings")]
+    [Tooltip("The GameObject that represents the menu.")]
     public GameObject menu;
-    private bool isMenuVisible = false;
+
+    [Header("Audio Settings")]
+    [Tooltip("The AudioSource component used for audio playback.")]
     public AudioSource audioSource;
-    public LevelDelay levelDelay;
+
+    // Flag indicating whether the menu is currently visible
+    private bool isMenuVisible = false;
 
     // Start is called before the first frame update
     void Start()

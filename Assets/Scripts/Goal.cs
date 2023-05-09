@@ -17,15 +17,23 @@ public class Goal : MonoBehaviour
     [Header("Player")]
     [Tooltip("The player object")]
     public Player player;
-
-    [Tooltip("The game object that represents the player")]
-    public GameObject playerGameObject;
-
+    // The game over screen object
+    [Header("UI Settings")]
+    [Tooltip("The game over screen object")]
     public GameObject winScreen;
+
+    [Tooltip("A static flag that indicates whether the player has scored a goal")]
     public static bool isGoal = false;
+
+    [Tooltip("The Pause component that controls pausing and resuming the game")]
     public Pause pause;
+
+    [Header("Audio Settings")]
+    [Tooltip("The GoalCrowdSoundEffect component that plays a crowd cheering sound effect when the player scores a goal")]
     public GoalCrowdSoundEffect goalCrowdSoundEffect;
 
+    [Header("Gameplay Settings")]
+    [Tooltip("The Timer component that tracks the time elapsed during gameplay")]
     public Timer timer;
 
     void Start()
@@ -81,7 +89,6 @@ public class Goal : MonoBehaviour
         ballRigidBody.velocity = Vector3.zero;
         ballRigidBody.angularVelocity = Vector3.zero;
         ball.SetActive(false);
-
 
         //Shows Win hud
         winScreen.SetActive(true);

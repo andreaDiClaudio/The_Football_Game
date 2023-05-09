@@ -5,8 +5,10 @@ using UnityEngine;
 
 public static class ProgressionManager
 {
+    // An array of booleans indicating whether each level is unlocked
     private static bool[] levelsUnlocked = new bool[3];
 
+    // Unlock the specified level
     public static void UnlockLevel(int levelNumber)
     {
         if (levelNumber <= levelsUnlocked.Length)
@@ -19,6 +21,7 @@ public static class ProgressionManager
         }
     }
 
+    // Check if the specified level is unlocked
     public static bool IsLevelUnlocked(int levelNumber)
     {
         if (levelNumber <= levelsUnlocked.Length)
