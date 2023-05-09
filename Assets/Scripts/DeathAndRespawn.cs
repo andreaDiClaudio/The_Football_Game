@@ -33,28 +33,15 @@ public class DeathAndRespawn : MonoBehaviour
     [Header("Death and Respawn")]
     [Tooltip("The time (in seconds) it takes for the player to respawn after dying")]
     public float respawnTime = 1f;
-    // The LevelDelay component that controls the delay between attempts
-    [Header("Level Settings")]
-    [Tooltip("The LevelDelay component that controls the delay between attempts")]
     public LevelDelay levelDelay;
-
-    // The TMP text object that displays the current attempt number
-    [Header("UI Settings")]
-    [Tooltip("The TMP text object that displays the current attempt number")]
     public TMP_Text attemptText;
-
-    [Header("Audio Settings")]
-    [Tooltip("The WhistleSoundEffect component that plays a whistle sound effect")]
     public WhistleSoundEffect whistleSoundEffect;
-
-    [Tooltip("The CrowdCheeringFailureSoundEffect component that plays a crowd cheering sound effect when the player fails")]
     public CrowdCheeringFailureSoundEffect crowdCheeringFailureSoundEffect;
-
-    [Tooltip("The game over screen object")]
     public GameObject gameOverScreen;
-
-    [Tooltip("The Pause component that controls pausing and resuming the game")]
+    //public GameObject obstacle;
+    private Vector3 obstacleInitialPosition;
     public Pause pause;
+
     void Start()
     {
         //Saves the spawn point and spawn rotation of the player

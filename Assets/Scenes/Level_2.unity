@@ -3721,6 +3721,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 668189175}
     - target: {fileID: 564599596814096084, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
+      propertyPath: changePlayer
+      value: 
+      objectReference: {fileID: 1853866415}
+    - target: {fileID: 564599596814096084, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: ballRigidBody
       value: 
       objectReference: {fileID: 1736895076}
@@ -3846,8 +3850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players:
-  - {fileID: 1853866410}
   - {fileID: 1700627062792597646}
+  - {fileID: 1853866410}
   playerIndex: 0
 --- !u!1001 &1868504731
 PrefabInstance:
@@ -4590,6 +4594,10 @@ PrefabInstance:
       propertyPath: attemptText
       value: 
       objectReference: {fileID: 668189175}
+    - target: {fileID: 564599596814096084, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
+      propertyPath: changePlayer
+      value: 
+      objectReference: {fileID: 1853866415}
     - target: {fileID: 564599596814096084, guid: 7c96cc45aad3a42a4ba02f5a5660fc68, type: 3}
       propertyPath: ballRigidBody
       value: 

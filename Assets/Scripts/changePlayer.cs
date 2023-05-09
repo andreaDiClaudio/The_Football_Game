@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class changePlayer : MonoBehaviour
+public class ChangePlayer : MonoBehaviour
 {
     public List<Player> players = new List<Player>();
+
     public int playerIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
         Player[] playerGameObjects = FindObjectsOfType<Player>();
-        Debug.Log(playerGameObjects);
+
         playerGameObjects[1].enabled = false;
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             DeactivatePlayer(playerIndex);
             playerIndex++;
