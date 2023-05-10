@@ -13,7 +13,7 @@ In 'The Football Game' you have to score goals under the time limit (45 seconds)
 ## Levels
 
 ### Level 1
-Is the tuorial. The pitch is smaller and there are no obstacles.
+Is the tutorial. The pitch is smaller and there are no obstacles.
 ### Level 2
 It has many static obstacles and the pitch is longer.
 ### Level 3
