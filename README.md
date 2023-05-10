@@ -1,5 +1,5 @@
 # The Football Game
-The Football Game is a small game developed with Unity.
+The Football Game is my first small game developed with Unity.
 The game is the solution to Mandatory II assignment for C# elective.
 
 ### Goal
