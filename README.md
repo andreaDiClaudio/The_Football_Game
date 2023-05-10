@@ -6,7 +6,6 @@ The game is the solution to Mandatory II assignment for C# elective.
 In 'The Football Game' you have to score goals under the time limit (45 seconds).
 
 ### Commands
-Simple and straightforward.
 - WASD / Arrow Keys to move the player
 - 'esc' to pause the game
 - 'c' to switch camera perspective
