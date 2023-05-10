@@ -597,7 +597,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
   audioSource: {fileID: 0}
-  levelDelay: {fileID: 0}
 --- !u!114 &564599596814096084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +620,7 @@ MonoBehaviour:
   whistleSoundEffect: {fileID: 0}
   crowdCheeringFailureSoundEffect: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  pause: {fileID: 0}
 --- !u!114 &933090200156885363
 MonoBehaviour:
   m_ObjectHideFlags: 0

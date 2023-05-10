@@ -48,7 +48,6 @@ public class MainMenu : MonoBehaviour
 
     public static void UpdateScoreboard(int levelIndex, string scoreText)
     {
-
         // Update the scoreboard array with the new score
         scoreboard[levelIndex] = "Level " + (levelIndex + 1) + ": " + scoreText + " seconds";
         PlayerPrefs.SetString("Level1Score", scoreboard[0]);

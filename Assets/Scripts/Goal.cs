@@ -65,7 +65,6 @@ public class Goal : MonoBehaviour
             // The new score is better than the previous one, so update the scoreboard and save the new score
             PlayerPrefs.SetFloat("Level" + levelIndex.ToString() + "Score", timeTaken);
             MainMenu.UpdateScoreboard(levelIndex, stringTimeTaken);
-
         }
     }
 
